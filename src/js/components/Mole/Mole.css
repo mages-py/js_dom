@@ -1,0 +1,7 @@
+.mole-character {
+  max-width: 80%;
+  max-height: 80%;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
