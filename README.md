@@ -6,6 +6,6 @@
 
 # Whack-a-Goblin
 
-[![Build Status](https://github.com/ВАШ-ЛОГИН/НАЗВАНИЕ-РЕПО/actions/workflows/web.yml/badge.svg)](https://github.com/ВАШ-ЛОГИН/НАЗВАНИЕ-РЕПО/actions/workflows/web.yml)
+[![Build Status](https://github.com/mages-py/js_dom/actions/workflows/web.yml/badge.svg)](https://github.com/mages-py/js_dom/actions/workflows/web.yml)
 
-🎮 Демо: [https://ВАШ-ЛОГИН.github.io/НАЗВАНИЕ-РЕПО/](https://ВАШ-ЛОГИН.github.io/НАЗВАНИЕ-РЕПО/)
+🎮 Демо: [https://mages-py.js_dom/](https://mages-py.js_dom/)
