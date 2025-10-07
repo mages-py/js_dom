@@ -6,8 +6,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/", // ← критично для GitHub Pages и dev-server
-    clean: true, // ← очищает dist перед сборкой
+    publicPath: isProduction ? '' : '/',
+    clean: true,
   },
   module: {
     rules: [
