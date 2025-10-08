@@ -1,3 +1,15 @@
+#game-board {
+  cursor: url('../../../img/hammer.png'), pointer;
+}
+
+.cell {
+  cursor: url('../../../img/hammer.png'), pointer;
+}
+
+.cell img {
+  cursor: url('../../../img/hammer.png'), pointer !important;
+}
+
 .game-board {
   display: grid;
   grid-template-columns: repeat(4, 100px);

@@ -1,5 +1,5 @@
 import "./Mole.css";
-import goblinImage from "../../../img/goblin.png"; // ← путь к общей папке img
+import goblinImage from "../../../img/goblin.png";
 
 export class Mole {
   constructor() {
@@ -7,14 +7,33 @@ export class Mole {
     this.element.src = goblinImage;
     this.element.alt = "Goblin";
     this.element.classList.add("mole-character");
+    this.active = false;
+    this.onClick = null;
+
+    this.element.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (this.active && this.onClick) {
+        this.onClick();
+      }
+    });
   }
 
-  getCurrentCellIndex() {
-    const parent = this.element.parentElement;
-    return parent ? parseInt(parent.dataset.index, 10) : null;
+  show(cell) {
+    if (this.element.parentElement) {
+      this.element.parentElement.removeChild(this.element);
+    }
+    cell.append(this.element);
+    this.active = true;
   }
 
-  moveTo(cell) {
-    cell.append(this.element); // Автоматическое перемещение в DOM
+  hide() {
+    if (this.element.parentElement) {
+      this.element.parentElement.removeChild(this.element);
+    }
+    this.active = false;
+  }
+
+  isActive() {
+    return this.active;
   }
 }
