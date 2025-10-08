@@ -12,5 +12,5 @@ export function initGame() {
   };
 
   moveMole();
-  setInterval(moveMole, 1500);
+  setInterval(moveMole, 1000);
 }

@@ -15,6 +15,6 @@ export class Mole {
   }
 
   moveTo(cell) {
-    cell.appendChild(this.element); // Автоматическое перемещение в DOM
+    cell.append(this.element); // Автоматическое перемещение в DOM
   }
 }
