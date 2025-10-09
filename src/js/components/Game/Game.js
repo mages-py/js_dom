@@ -1,3 +1,5 @@
+const QTY_ERRORS = 5;
+
 export class Game {
   constructor(gameBoard, mole, onScoreChange, onGameOver) {
     this.gameBoard = gameBoard;
@@ -30,7 +32,7 @@ export class Game {
         this.mole.hide();
         this.misses++;
         this.onScoreChange(this.score, this.misses);
-        if (this.misses >= 5) {
+        if (this.misses >= QTY_ERRORS) {
           this.gameOver();
         } else {
           this.spawnMole();
