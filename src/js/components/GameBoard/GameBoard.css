@@ -7,7 +7,7 @@
 }
 
 .cell img {
-  cursor: url('../../../img/hammer.png'), pointer !important;
+  cursor: url('../../../img/hammer.png'), pointer;
 }
 
 .game-board {

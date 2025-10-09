@@ -24,8 +24,16 @@ export class GameBoard {
     }
   }
 
-  getRandomCell() {
-    return this.cells[Math.floor(Math.random() * this.totalCells)];
+  getRandomCell(excludeIndex = null) {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * this.totalCells);
+    } while (
+      excludeIndex !== null &&
+      newIndex === excludeIndex &&
+      this.totalCells > 1
+    );
+    return this.cells[newIndex];
   }
 
   clear() {

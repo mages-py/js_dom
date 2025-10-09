@@ -8,11 +8,15 @@ let mole = null;
 let scoreEl = null;
 let startBtn = null;
 let uiControls = null;
+let gameOverEl = null;
+let finalScoreEl = null;
 
 function createUI() {
   // Кнопка и контейнер уже есть в HTML — просто получаем ссылки
   startBtn = document.getElementById("start-btn");
   uiControls = document.getElementById("ui-controls");
+  gameOverEl = document.getElementById('game-result');
+  finalScoreEl = document.getElementById('final-score');
 
   // Создаём элемент счёта (скрыт до старта)
   scoreEl = document.createElement("div");
@@ -30,12 +34,14 @@ function createUI() {
 function showStartScreen() {
   if (scoreEl) scoreEl.style.display = "none";
   if (uiControls) uiControls.style.display = "block";
+  if (gameOverEl) gameOverEl.style.display = "none";
   if (gameBoard) gameBoard.clear();
 }
 
 function startGame() {
-  // Скрываем кнопку, показываем счёт
-  uiControls.style.display = "none";
+  // Скрываем экран окончания игры, показываем счёт
+  // Кнопку НЕ скрываем - она остается видимой для перезапуска
+  gameOverEl.style.display = "none";
   scoreEl.style.display = "block";
 
   // Создаём игру при первом запуске или перезапускаем
@@ -56,8 +62,11 @@ function startGame() {
 
   const endGame = (score) => {
     setTimeout(() => {
-      alert(`Игра окончена! Ваш счёт: ${score}`);
-      showStartScreen();
+      // Показываем экран окончания игры
+      finalScoreEl.textContent = score;
+      gameOverEl.style.display = "block";
+      scoreEl.style.display = "none";
+      // Кнопка "Начать игру" остается видимой - теперь она будет работать как "Играть снова"
     }, 100);
   };
 
