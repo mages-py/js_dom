@@ -7,16 +7,14 @@ let gameBoard = null;
 let mole = null;
 let scoreEl = null;
 let startBtn = null;
-let uiControls = null;
 let gameOverEl = null;
 let finalScoreEl = null;
 
 function createUI() {
   // Кнопка и контейнер уже есть в HTML — просто получаем ссылки
   startBtn = document.getElementById("start-btn");
-  uiControls = document.getElementById("ui-controls");
-  gameOverEl = document.getElementById('game-result');
-  finalScoreEl = document.getElementById('final-score');
+  gameOverEl = document.getElementById("game-result");
+  finalScoreEl = document.getElementById("final-score");
 
   // Создаём элемент счёта (скрыт до старта)
   scoreEl = document.createElement("div");
@@ -29,13 +27,6 @@ function createUI() {
     display: none;
   `;
   document.body.insertBefore(scoreEl, document.getElementById("game-board"));
-}
-
-function showStartScreen() {
-  if (scoreEl) scoreEl.style.display = "none";
-  if (uiControls) uiControls.style.display = "block";
-  if (gameOverEl) gameOverEl.style.display = "none";
-  if (gameBoard) gameBoard.clear();
 }
 
 function startGame() {

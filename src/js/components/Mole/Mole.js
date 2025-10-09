@@ -18,16 +18,16 @@ export class Mole {
     });
   }
 
-show(cell) {
-  this.element.remove();
-  cell.append(this.element);
-  this.active = true;
-}
+  show(cell) {
+    this.element.remove();
+    cell.append(this.element);
+    this.active = true;
+  }
 
-hide() {
-  this.element.remove();
-  this.active = false;
-}
+  hide() {
+    this.element.remove();
+    this.active = false;
+  }
 
   isActive() {
     return this.active;
