@@ -8201,6 +8201,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"style-loader@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "style-loader@npm:4.0.0"
+  peerDependencies:
+    webpack: ^5.27.0
+  checksum: 0b751b4cc8394a2fe1df6194bb2f6dd68e859e36f22030994bb7b5220f24f9efb5705e78b2442226e6fa4c90f74b397529c7eb0a1d7326fb016e1e140e90151c
+  languageName: node
+  linkType: hard
+
 "stylehacks@npm:^7.0.5":
   version: 7.0.6
   resolution: "stylehacks@npm:7.0.6"
@@ -8772,6 +8781,7 @@ __metadata:
     jest: 29.7.0
     mini-css-extract-plugin: 2.9.2
     prettier: 3.5.0
+    style-loader: ^4.0.0
     terser-webpack-plugin: 5.3.11
     webpack: 5.97.1
     webpack-cli: 6.0.1

@@ -20,7 +20,7 @@ export class Mole {
 
   show(cell) {
     if (this.element.parentElement) {
-      this.element.parentElement.removeChild(this.element);
+      this.element.parentElement.remove(this.element);
     }
     cell.append(this.element);
     this.active = true;
@@ -28,7 +28,7 @@ export class Mole {
 
   hide() {
     if (this.element.parentElement) {
-      this.element.parentElement.removeChild(this.element);
+      this.element.parentElement.remove(this.element);
     }
     this.active = false;
   }
